@@ -52,9 +52,6 @@ export class ConnectionController implements IConnectionComponentController {
 				}),
 			onAzureTenantSelection: (azureTenantId?: string) => this.onAzureTenantSelection(azureTenantId),
 		}, providerName);
-		this._connectionWidget.ConnectionStringParsed((profile) => {
-			this._model.options = profile.options;
-		});
 		this._providerName = providerName;
 	}
 

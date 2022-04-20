@@ -225,7 +225,7 @@ export class ConnectionWidget extends lifecycle.Disposable {
 	}
 
 	private addConnectionStringInput(): void {
-		if (this._connectionManagementService.getProviderProperties(this._providerName).showConnectionStringOption) {
+		if (this._connectionManagementService.getProviderProperties(this._providerName).supportConnectionString) {
 			let connectionStringContainer = DialogHelper.appendRow(this._tableContainer, ConnectionStringText, 'connection-label', 'connection-input');
 			this._connectionStringInput = new InputBox(connectionStringContainer, this._contextViewService, {
 				ariaLabel: ConnectionStringText,
